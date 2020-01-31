@@ -6,14 +6,38 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Rigidbody))]
 public class BaseTool : MonoBehaviour
 {
-    public UnityEvent eventToTrigger;
+    public UnityEvent eventToTriggerOnEnter;
+    public UnityEvent eventToTriggerOnExit;
     public string tagToMatch;
 
     void OnCollisionEnter(Collision coll)
     {
         if (coll.gameObject.tag == tagToMatch)
         {
-            eventToTrigger.Invoke();
+            eventToTriggerOnEnter.Invoke();
         }
     }
+    void OnCollisionExit(Collision coll)
+    {
+        if (coll.gameObject.tag == tagToMatch)
+        {
+            eventToTriggerOnExit.Invoke();
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == tagToMatch)
+        {
+            eventToTriggerOnEnter.Invoke();
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == tagToMatch)
+        {
+            eventToTriggerOnExit.Invoke();
+        }
+    }
+
 }
