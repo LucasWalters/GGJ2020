@@ -10,22 +10,16 @@ public class ChairAnimations : MonoBehaviour
     const float DurationAnimationInSeconds = 0.5f;
     private Vector3 MoveInterval = (Vector3.left * 8);
     private Vector3 StartPosition = new Vector3(0, 0, 0) - (Vector3.left * 8);
-    public GameObject chair;
 
 
     public void ResetChairPosition()
     {
-        chair
-            .transform
-            .position = StartPosition;
+        this.transform.position = StartPosition;
     }
     public TweenerCore<Vector3, Vector3, VectorOptions> MoveChair()
     {
-        var currentPosition = this.chair.transform.position;
+        var currentPosition = this.transform.position;
 
-        return chair
-            .transform
-            .DOMove(currentPosition + MoveInterval, DurationAnimationInSeconds)
-            .SetEase(Ease.InOutQuad);
+        return this.transform.DOMove(currentPosition + MoveInterval, DurationAnimationInSeconds).SetEase(Ease.InOutQuad);
     }
 }

@@ -9,9 +9,9 @@ public class CustomerFactory : MonoBehaviour
 
     public GameObject CreateCustomer()
     {
-        GameObject cube = Instantiate(customerPrefab, customerParent);
-        cube.GetComponent<MeshRenderer>().material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
-        return cube;
+        GameObject customer = Instantiate(customerPrefab, customerParent);
+        customer.transform.Find("Body").GetComponent<MeshRenderer>().material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+        return customer;
     }
 
     public void DeleteCustomer(GameObject customer)
