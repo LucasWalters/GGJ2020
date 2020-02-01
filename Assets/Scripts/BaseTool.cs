@@ -36,26 +36,42 @@ public class BaseTool : MonoBehaviour
     }
 
     void Update() {
-        if (colliding) {
-            debugMessage = "Colliding.";
-            if (triggeredByPlayer) {
-                
-                if (triggerDown == false && OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0.5f) {
-                    triggerDown = true;
-                    debugMessage += " Triggered";
+        if (triggerHairEvent) {
+            if (colliding) {
+                debugMessage = "Colliding.";
+                if (triggeredByPlayer) {
+                    
+                    if (triggerDown == false && (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger) || Input.GetKeyDown(KeyCode.E))) {
+                        triggerDown = true;
+                        eventToTriggerOnEnter.Invoke();
+                    }
+                    if (triggerDown == true && (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger) || Input.GetKeyUp(KeyCode.E))) {
+                        triggerDown = false;
+                        eventToTriggerOnExit.Invoke();
+                    }
+                }
+                else {
                     eventToTriggerOnEnter.Invoke();
-                }
-                if (triggerDown == true && OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) < 0.5f) {
-                    triggerDown = false;
-                    eventToTriggerOnExit.Invoke();
-                }
-            }
+                }  
+            } 
             else {
-                eventToTriggerOnEnter.Invoke();
+                debugMessage = "Not Colliding";
             }
         }
         else {
-            debugMessage = "Not Colliding";
+            if (triggeredByPlayer) {
+                if (triggerDown == false && (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger) || Input.GetKeyDown(KeyCode.E))) {
+                        triggerDown = true;
+                        eventToTriggerOnEnter.Invoke();
+                    }
+                    if (triggerDown == true && (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger) || Input.GetKeyUp(KeyCode.E))) {
+                        triggerDown = false;
+                        eventToTriggerOnExit.Invoke();
+                }
+            } 
+            else {
+                eventToTriggerOnEnter.Invoke();
+            }
         }
         QuestDebug.Instance.Log(debugMessage);
     }
