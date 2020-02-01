@@ -16,8 +16,14 @@ public class MirrorLook : MonoBehaviour
 
     void Update()
     {
-        Vector3 diff = (mainCamera.position - transform.position).normalized;
-        Vector3 lookDirection = new Vector3(diff.x, -diff.y, -diff.z);
+        if (Camera.current == null)
+        {
+            return;
+        }
+        mainCamera = Camera.current.transform;
+        Vector3 diff = mainCamera.position - transform.position;
+        //transform.position = transform.position + new Vector3
+        Vector3 lookDirection = new Vector3(diff.x, diff.y, -diff.z);
 
         transform.localRotation = Quaternion.LookRotation(lookDirection, Vector3.up);
     }

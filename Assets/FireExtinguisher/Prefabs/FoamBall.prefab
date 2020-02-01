@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 114366119046958494}
   m_Layer: 10
   m_Name: FoamBall
-  m_TagString: Untagged
+  m_TagString: FoamBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

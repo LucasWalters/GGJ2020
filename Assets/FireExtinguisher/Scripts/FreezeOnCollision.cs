@@ -22,7 +22,8 @@ public class FreezeOnCollision : MonoBehaviour {
      */
     private void OnCollisionEnter(Collision col)
     {
-        if ((!onlyHitStatic || col.gameObject.isStatic)
+        if ((!onlyHitStatic || col.gameObject.isStatic) 
+             && col.gameObject.tag != "FoamBall"
              && col.relativeVelocity.magnitude > velocityMagnitudeOnFreeze)
         {
             // rBody.constraints = RigidbodyConstraints.FreezeAll;
