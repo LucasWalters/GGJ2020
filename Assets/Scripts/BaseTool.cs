@@ -6,37 +6,43 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Rigidbody))]
 public class BaseTool : MonoBehaviour
 {
+    public bool triggerHairEvent = true;
     public UnityEvent eventToTriggerOnEnter;
     public UnityEvent eventToTriggerOnExit;
     public string tagToMatch;
 
     void OnCollisionEnter(Collision coll)
     {
-        if (coll.gameObject.tag == tagToMatch)
-        {
-            eventToTriggerOnEnter.Invoke();
-        }
+        CheckAndTriggerEvents(coll.gameObject, true);
     }
     void OnCollisionExit(Collision coll)
     {
-        if (coll.gameObject.tag == tagToMatch)
-        {
-            eventToTriggerOnExit.Invoke();
-        }
+        CheckAndTriggerEvents(coll.gameObject, false);
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == tagToMatch)
-        {
-            eventToTriggerOnEnter.Invoke();
-        }
+        CheckAndTriggerEvents(other.gameObject, true);
     }
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == tagToMatch)
+        CheckAndTriggerEvents(other.gameObject, false);
+    }
+
+    private void CheckAndTriggerEvents(GameObject collidedGO, bool enter)
+    {
+        if (collidedGO.tag == tagToMatch)
         {
             eventToTriggerOnExit.Invoke();
+
+            if (enter && triggerHairEvent)
+            {
+                Hair hair = collidedGO.GetComponent<Hair>();
+                if (hair != null)
+                {
+                    hair.hairEvent.Invoke();
+                }
+            }
         }
     }
 

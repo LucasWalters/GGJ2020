@@ -758,6 +758,7 @@ GameObject:
   - component: {fileID: 1514234443}
   - component: {fileID: 1514234442}
   - component: {fileID: 1514234441}
+  - component: {fileID: 1514234447}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Hair
@@ -871,6 +872,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1514234447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514234440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8259936a62280434ea51e9bb3216b0ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hairEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1886690985 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2368070968824971776, guid: 40722a18322a5064088550e50effae4d,
@@ -976,6 +1003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383d6aa0d0c3e479d84262acf3bc6855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerHairEvent: 1
   eventToTriggerOnEnter:
     m_PersistentCalls:
       m_Calls:
