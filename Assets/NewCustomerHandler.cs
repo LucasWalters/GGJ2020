@@ -14,6 +14,7 @@ public class NewCustomerHandler : MonoBehaviour
 
     public GameObject chair;
     public DoorAnimations exitDoorAnimations;
+    public DoorAnimations entryDoorAnimations;
 
 
     // Update is called once per frame
@@ -28,12 +29,16 @@ public class NewCustomerHandler : MonoBehaviour
     void NextCustomer()
     {
         exitDoorAnimations.OpenDoor();
-
         MoveChair(chair)
             .OnComplete(() =>
             {
                 ResetChairPosition();
-                MoveChair(chair);
+                entryDoorAnimations.OpenDoor();
+                MoveChair(chair)
+                .OnComplete(() =>
+                {
+                    entryDoorAnimations.CloseDoor();
+                });
 
                 exitDoorAnimations.CloseDoor();
             });
