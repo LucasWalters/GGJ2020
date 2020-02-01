@@ -13,17 +13,12 @@ public class NewCustomerHandler : MonoBehaviour
     public CustomerFactory customerFactory;
     private GameObject customer;
 
-
-    // Update is called once per frame
-    void Update()
+    public void Start()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            NextCustomer();
-        }
+        NextCustomer();
     }
 
-    void NextCustomer()
+    public void NextCustomer()
     {
         exitDoorAnimations.OpenDoor();
 
@@ -38,7 +33,6 @@ public class NewCustomerHandler : MonoBehaviour
 
                 chairAnimations.ResetChairPosition();
                 customer = customerFactory.CreateCustomer();
-                customer.transform.localPosition = new Vector3(0, 0, 2);
                 entryDoorAnimations.OpenDoor();
 
                 chairAnimations

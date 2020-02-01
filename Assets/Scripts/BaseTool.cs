@@ -13,7 +13,6 @@ public class BaseTool : MonoBehaviour
     public string tagToMatch = "Hair";
 
     private bool triggerDown, colliding;
-    private string debugMessage = "";
 
     void OnCollisionEnter(Collision coll)
     {
@@ -38,7 +37,6 @@ public class BaseTool : MonoBehaviour
     void Update() {
         if (triggerHairEvent) {
             if (colliding) {
-                debugMessage = "Colliding.";
                 if (triggeredByPlayer) {
                     
                     if (triggerDown == false && (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger) || Input.GetKeyDown(KeyCode.E))) {
@@ -51,9 +49,6 @@ public class BaseTool : MonoBehaviour
                     }
                 }
             } 
-            else {
-                debugMessage = "Not Colliding";
-            }
         }
         else {
             if (triggeredByPlayer) {
@@ -70,7 +65,6 @@ public class BaseTool : MonoBehaviour
                 eventToTriggerOnEnter.Invoke();
             }
         }
-        QuestDebug.Instance.Log(debugMessage);
     }
 
     // private void CheckAndTriggerEvents(GameObject collidedGO, bool enter)

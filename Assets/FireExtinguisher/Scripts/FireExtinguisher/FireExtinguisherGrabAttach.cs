@@ -58,7 +58,7 @@ public class FireExtinguisherGrabAttach : OVRGrabbable {
 		
 	
 	private void Update() {
-		bool shouldSpout = beingGrabbed && (OVRInput.Get(OVRInput.RawButton.X) || OVRInput.Get(OVRInput.RawButton.A));
+		bool shouldSpout = beingGrabbed && (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger));
 		fireExtinguisherController.SetSpouting(shouldSpout);
 		handle.localEulerAngles = new Vector3(0, shouldSpout ? -27.141f : 0, 0);
 		

@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LevelManager : MonoBehaviour
 {
     private int currentLevel = 0;
     private GameObject currentTool;
     public Transform leftHand, rightHand;
+    public UnityEvent onNextLevel;
     public int CurrentLevel
     {
         get { return currentLevel; }
@@ -35,6 +37,7 @@ public class LevelManager : MonoBehaviour
             currentLevel = 0;
         }
         SetNewTool();
+        onNextLevel.Invoke();
     }
 
     private void SetNewTool()

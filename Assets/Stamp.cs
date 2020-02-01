@@ -7,9 +7,11 @@ public class Stamp : MonoBehaviour
     public GameObject stampToClone;
     public float stampCooldown = 1f;
     public int maxStamps = 100;
+    public LevelManager levelManager;
     private GameObject[] stamps;
     private int currentStampIndex = 0;
     private float lastStamp;
+
 
     private void Start()
     {
@@ -27,6 +29,10 @@ public class Stamp : MonoBehaviour
         {
             return;
         }
+        if (levelManager != null && collision.gameObject.tag == "Head")
+        {
+            levelManager.GoToNextLevel();
+        }
         lastStamp = Time.time;
         ContactPoint cp = collision.contacts[0];
         if (++currentStampIndex == stamps.Length)
@@ -35,6 +41,7 @@ public class Stamp : MonoBehaviour
         }
         stamps[currentStampIndex].transform.position = cp.point;
         stamps[currentStampIndex].transform.rotation = Quaternion.LookRotation(cp.normal, stampToClone.transform.up);
+        stamps[currentStampIndex].transform.parent = collision.transform;
         stamps[currentStampIndex].SetActive(true);
     }
 }
