@@ -7,6 +7,7 @@ public class Stamp : MonoBehaviour
     public GameObject stampToClone;
     public float stampCooldown = 1f;
     public int maxStamps = 100;
+    public float nextLevelDelay = 2f;
     public LevelManager levelManager;
     private GameObject[] stamps;
     private int currentStampIndex = 0;
@@ -23,6 +24,12 @@ public class Stamp : MonoBehaviour
         }
     }
 
+    private IEnumerator DelayedGoToNextLevel()
+    {
+        yield return new WaitForSeconds(nextLevelDelay);
+        levelManager.GoToNextLevel();
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (Time.time - lastStamp < stampCooldown)
@@ -31,7 +38,8 @@ public class Stamp : MonoBehaviour
         }
         if (levelManager != null && collision.gameObject.tag == "Head")
         {
-            levelManager.GoToNextLevel();
+            StopAllCoroutines();
+            StartCoroutine(DelayedGoToNextLevel());
         }
         lastStamp = Time.time;
         ContactPoint cp = collision.contacts[0];
