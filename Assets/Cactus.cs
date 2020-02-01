@@ -21,9 +21,9 @@ public class Cactus : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
-        if (Time.time - lastPrick < prickCooldown)
+        if (collision.gameObject.tag != "Customer" || Time.time - lastPrick < prickCooldown)
         {
             return;
         }

@@ -32,11 +32,11 @@ public class Stamp : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (Time.time - lastStamp < stampCooldown)
+        if (collision.gameObject.tag != "Customer" || Time.time - lastStamp < stampCooldown)
         {
             return;
         }
-        if (levelManager != null && collision.gameObject.tag == "Head")
+        if (levelManager != null)
         {
             StopAllCoroutines();
             StartCoroutine(DelayedGoToNextLevel());
