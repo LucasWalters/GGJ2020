@@ -14,10 +14,10 @@ public class HairBehaviour : MonoBehaviour
         if (collider.tag.ToLower() == "tool")
         {
             collider.GetComponent<MeshRenderer>().material.color = Color.red;
-            if (collider.GetComponent<BaseTool>().isTriggerBased)
-            {
-                collider.GetComponent<BaseTool>().ExecuteAction(this.gameObject);
-            }
+            // if (collider.GetComponent<BaseTool>().isTriggerBased)
+            // {
+            //     collider.GetComponent<BaseTool>().ExecuteAction(this.gameObject);
+            // }
         }
     }
 }

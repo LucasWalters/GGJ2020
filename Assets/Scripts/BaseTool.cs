@@ -7,43 +7,74 @@ using UnityEngine.Events;
 public class BaseTool : MonoBehaviour
 {
     public bool triggerHairEvent = true;
+    public bool triggeredByPlayer = false;
     public UnityEvent eventToTriggerOnEnter;
     public UnityEvent eventToTriggerOnExit;
-    public string tagToMatch;
+    public string tagToMatch = "Hair";
+
+    private bool triggerDown, colliding;
+    private string debugMessage = "";
 
     void OnCollisionEnter(Collision coll)
     {
-        CheckAndTriggerEvents(coll.gameObject, true);
+        colliding = true;
     }
     void OnCollisionExit(Collision coll)
     {
-        CheckAndTriggerEvents(coll.gameObject, false);
+        eventToTriggerOnExit.Invoke();
+        colliding = false;
     }
 
     void OnTriggerEnter(Collider other)
     {
-        CheckAndTriggerEvents(other.gameObject, true);
+        colliding = true;
     }
     void OnTriggerExit(Collider other)
     {
-        CheckAndTriggerEvents(other.gameObject, false);
+        eventToTriggerOnExit.Invoke();
+        colliding = false;
     }
 
-    private void CheckAndTriggerEvents(GameObject collidedGO, bool enter)
-    {
-        if (collidedGO.tag == tagToMatch)
-        {
-            eventToTriggerOnExit.Invoke();
-
-            if (enter && triggerHairEvent)
-            {
-                Hair hair = collidedGO.GetComponent<Hair>();
-                if (hair != null)
-                {
-                    hair.hairEvent.Invoke();
+    void Update() {
+        if (colliding) {
+            debugMessage = "Colliding.";
+            if (triggeredByPlayer) {
+                
+                if (triggerDown == false && OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0.5f) {
+                    triggerDown = true;
+                    debugMessage += " Triggered";
+                    eventToTriggerOnEnter.Invoke();
+                }
+                if (triggerDown == true && OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) < 0.5f) {
+                    triggerDown = false;
+                    eventToTriggerOnExit.Invoke();
                 }
             }
+            else {
+                eventToTriggerOnEnter.Invoke();
+            }
         }
+        else {
+            debugMessage = "Not Colliding";
+        }
+        QuestDebug.Instance.Log(debugMessage);
     }
+
+    // private void CheckAndTriggerEvents(GameObject collidedGO, bool enter)
+    // {
+    //     if (collidedGO.tag == tagToMatch)
+    //     {
+    //         if (triggeredByPlayer) {
+
+    //         }
+    //         if (enter) {
+    //             eventToTriggerOnEnter.Invoke();
+    //         } else {
+    //             eventToTriggerOnExit.Invoke();
+    //         }
+
+            
+    //     }
+    // }
 
 }

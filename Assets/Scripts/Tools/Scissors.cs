@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Scissors : BaseTool
+public class Scissors : MonoBehaviour
 {
-    public override void ExecuteAction(GameObject hairObject)
+    public void Cut(GameObject hairObject)
     {
         hairObject.transform.localScale = new Vector3(
                hairObject.transform.localScale.x * 0.9f,

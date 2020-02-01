@@ -39,12 +39,12 @@ public class LevelManager : MonoBehaviour
 
     private void SetNewTool()
     {
-        if (currentTool != null)
+        foreach (GameObject tool in tools)
         {
-            Destroy(currentTool);
+            tool.SetActive(false);
         }
-        currentTool = Instantiate(tools[currentLevel], rightHand.position, Quaternion.identity);
-        currentTool.GetComponent<FollowHand>().handToFollow = rightHand.transform;
+        tools[currentLevel].SetActive(true);
+        tools[currentLevel].GetComponent<FollowHand>().handToFollow = rightHand.transform;
     }
 
 }
