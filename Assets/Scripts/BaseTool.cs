@@ -50,9 +50,6 @@ public class BaseTool : MonoBehaviour
                         eventToTriggerOnExit.Invoke();
                     }
                 }
-                else {
-                    eventToTriggerOnEnter.Invoke();
-                }  
             } 
             else {
                 debugMessage = "Not Colliding";
