@@ -54,19 +54,38 @@ public class FireExtinguisherGrabAttach : OVRGrabbable {
 		audio.clip = end;
 		audio.Play();	
 	}
-		
-		
-	
+
+	private void OnEnable()
+	{
+		beingGrabbed = true;
+		UpdateSpouting();
+	}
+
+	private void OnDisable()
+	{
+		beingGrabbed = false;
+		UpdateSpouting();
+	}
+
 	private void Update() {
+		UpdateSpouting();
+	}
+
+	private void UpdateSpouting()
+	{
 		bool shouldSpout = beingGrabbed && (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger));
 		fireExtinguisherController.SetSpouting(shouldSpout);
 		handle.localEulerAngles = new Vector3(0, shouldSpout ? -27.141f : 0, 0);
-		
-		if (lastSpout != shouldSpout) {
+
+		if (lastSpout != shouldSpout)
+		{
 			lastSpout = shouldSpout;
-			if (shouldSpout) {
+			if (shouldSpout)
+			{
 				StartCoroutine(startSound());
-			} else {
+			}
+			else
+			{
 				endSound();
 			}
 		}
