@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class HairBehaviour : MonoBehaviour
 {
-    public void OnTriggerEnter(Collider coll)
+    public void OnTriggerEnter(Collider collider)
     {
         Debug.Log("OnTriggerEnter");
         this.GetComponent<MeshRenderer>().material.color = Color.green;
-        if (coll.gameObject.tag.ToLower() == "tool")
+
+        QuestDebug.Instance.Log(collider.name + " Tag: " + collider.tag);
+
+        if (collider.tag.ToLower() == "tool")
         {
-            coll.GetComponent<MeshRenderer>().material.color = Color.red;
-            if (coll.GetComponent<BaseTool>().isTriggerBased)
+            collider.GetComponent<MeshRenderer>().material.color = Color.red;
+            if (collider.GetComponent<BaseTool>().isTriggerBased)
             {
-                coll.GetComponent<BaseTool>().ExecuteAction(this.gameObject);
+                collider.GetComponent<BaseTool>().ExecuteAction(this.gameObject);
             }
         }
     }

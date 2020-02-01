@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Katana : BaseTool
+public class Katana : MonoBehaviour
 {
-
-    public override void ExecuteAction(GameObject hairObject)
+    public void OnTriggerEnter(Collider coll)
     {
-        hairObject.GetComponent<Rigidbody>().useGravity = true;
+        if (coll.tag == "Hair")
+        {
+            coll.GetComponent<Rigidbody>().useGravity = true;
+        }
     }
 }

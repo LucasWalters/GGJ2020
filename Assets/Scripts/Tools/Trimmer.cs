@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Trimmer : BaseTool
+public class Trimmer : MonoBehaviour
 {
-    public override void ExecuteAction(GameObject hairObject)
+    public void OnTriggerEnter(Collider coll)
     {
-        hairObject.SetActive(false);
+        if (coll.tag == "Hair")
+        {
+            coll.gameObject.SetActive(false);
+        }
     }
 }
