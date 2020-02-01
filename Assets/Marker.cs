@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Marker : MonoBehaviour
 {
-    public LayerMask markerLayer;
     public int markerSize = 10;
     public Color32 markerColor = Color.black;
     public float drawCooldown = 0.1f;
@@ -53,7 +52,7 @@ public class Marker : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if (Time.time - lastDraw < drawCooldown)
+        if (collision.gameObject.tag != "Customer" || Time.time - lastDraw < drawCooldown)
         {
             return;
         }
@@ -66,7 +65,7 @@ public class Marker : MonoBehaviour
         pointOrig = cp.point + cp.normal * 0.5f;
         pointDest = cp.point + cp.normal * 0.5f - cp.normal;
 
-        if (cp.otherCollider.Raycast(ray, out hit, markerLayer))
+        if (cp.otherCollider.Raycast(ray, out hit, 1))
         {
 
             Material mat = rend.sharedMaterial;
