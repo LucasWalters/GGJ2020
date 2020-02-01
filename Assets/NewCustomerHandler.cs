@@ -9,10 +9,11 @@ public class NewCustomerHandler : MonoBehaviour
     const float Visible = 100;
     const float DurationAnimationInSeconds = 0.5f;
 
-    private Vector3 MoveInterval = (Vector3.left * 5);
-    private Vector3 StartPosition = new Vector3(0, 0, 0) - (Vector3.left * 5);
+    private Vector3 MoveInterval = (Vector3.left * 8);
+    private Vector3 StartPosition = new Vector3(0, 0, 0) - (Vector3.left * 8);
 
-    public GameObject currentChair;
+    public GameObject chair;
+    public DoorAnimations exitDoorAnimations;
 
 
     // Update is called once per frame
@@ -26,24 +27,28 @@ public class NewCustomerHandler : MonoBehaviour
 
     void NextCustomer()
     {
-        MoveChair(currentChair)
+        exitDoorAnimations.OpenDoor();
+
+        MoveChair(chair)
             .OnComplete(() =>
             {
                 ResetChairPosition();
-                MoveChair(currentChair);
+                MoveChair(chair);
+
+                exitDoorAnimations.CloseDoor();
             });
     }
 
     void ResetChairPosition()
     {
-        currentChair
+        chair
             .transform
             .position = StartPosition;
     }
 
     DG.Tweening.Core.TweenerCore<UnityEngine.Vector3, UnityEngine.Vector3, DG.Tweening.Plugins.Options.VectorOptions> MoveChair(GameObject chair)
     {
-        var currentPosition = currentChair.transform.position;
+        var currentPosition = this.chair.transform.position;
 
         return chair
             .transform
