@@ -2,17 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using DG.Tweening.Core;
+using DG.Tweening.Plugins.Options;
 
 public class NewCustomerHandler : MonoBehaviour
 {
-    const float Invisible = 0;
-    const float Visible = 100;
-    const float DurationAnimationInSeconds = 0.5f;
-
-    private Vector3 MoveInterval = (Vector3.left * 8);
-    private Vector3 StartPosition = new Vector3(0, 0, 0) - (Vector3.left * 8);
-
-    public GameObject chair;
+    public ChairAnimations chairAnimations;
     public DoorAnimations exitDoorAnimations;
     public DoorAnimations entryDoorAnimations;
 
@@ -29,35 +24,22 @@ public class NewCustomerHandler : MonoBehaviour
     void NextCustomer()
     {
         exitDoorAnimations.OpenDoor();
-        MoveChair(chair)
+
+        chairAnimations
+            .MoveChair()
             .OnComplete(() =>
             {
-                ResetChairPosition();
+                chairAnimations.ResetChairPosition();
                 entryDoorAnimations.OpenDoor();
-                MoveChair(chair)
-                .OnComplete(() =>
-                {
-                    entryDoorAnimations.CloseDoor();
-                });
+
+                chairAnimations
+                    .MoveChair()
+                    .OnComplete(() =>
+                    {
+                        entryDoorAnimations.CloseDoor();
+                    });
 
                 exitDoorAnimations.CloseDoor();
             });
-    }
-
-    void ResetChairPosition()
-    {
-        chair
-            .transform
-            .position = StartPosition;
-    }
-
-    DG.Tweening.Core.TweenerCore<UnityEngine.Vector3, UnityEngine.Vector3, DG.Tweening.Plugins.Options.VectorOptions> MoveChair(GameObject chair)
-    {
-        var currentPosition = this.chair.transform.position;
-
-        return chair
-            .transform
-            .DOMove(currentPosition + MoveInterval, DurationAnimationInSeconds)
-            .SetEase(Ease.InOutQuad);
     }
 }
