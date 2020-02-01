@@ -10,6 +10,8 @@ public class NewCustomerHandler : MonoBehaviour
     public ChairAnimations chairAnimations;
     public DoorAnimations exitDoorAnimations;
     public DoorAnimations entryDoorAnimations;
+    public CustomerFactory customerFactory;
+    private GameObject customer;
 
 
     // Update is called once per frame
@@ -29,7 +31,14 @@ public class NewCustomerHandler : MonoBehaviour
             .MoveChair()
             .OnComplete(() =>
             {
+                if (customer != null)
+                {
+                    customerFactory.DeleteCustomer(customer);
+                }
+
                 chairAnimations.ResetChairPosition();
+                customer = customerFactory.CreateCustomer();
+                customer.transform.localPosition = new Vector3(0, 0, 2);
                 entryDoorAnimations.OpenDoor();
 
                 chairAnimations
