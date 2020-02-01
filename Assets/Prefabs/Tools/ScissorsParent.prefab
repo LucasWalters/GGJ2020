@@ -42,7 +42,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921195366312265743}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.09315531, y: 0.035606682, z: 0.15700845}
@@ -76,13 +76,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerHairEvent: 1
-  triggeredByPlayer: 0
+  triggeredByPlayer: 1
   eventToTriggerOnEnter:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: Shrink
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 538490768208690044}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Snipping
+          m_BoolArgument: 0
+        m_CallState: 2
   eventToTriggerOnExit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 538490768208690044}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: NotSnipping
+          m_BoolArgument: 0
+        m_CallState: 2
   tagToMatch: Hair
 --- !u!1001 &3209287039277792540
 PrefabInstance:
@@ -166,6 +199,12 @@ PrefabInstance:
 --- !u!4 &7634473562567562758 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: f0333aea294568f4784380b1f2696965,
+    type: 3}
+  m_PrefabInstance: {fileID: 3209287039277792540}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &538490768208690044 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: f0333aea294568f4784380b1f2696965,
     type: 3}
   m_PrefabInstance: {fileID: 3209287039277792540}
   m_PrefabAsset: {fileID: 0}

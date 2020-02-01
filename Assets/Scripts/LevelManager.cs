@@ -44,7 +44,6 @@ public class LevelManager : MonoBehaviour
             tool.SetActive(false);
         }
         tools[currentLevel].SetActive(true);
-        tools[currentLevel].GetComponent<FollowHand>().handToFollow = rightHand.transform;
     }
 
 }
