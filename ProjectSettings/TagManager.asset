@@ -10,6 +10,7 @@ TagManager:
   - Marker
   - Head
   - FoamBall
+  - Customer
   layers:
   - Default
   - TransparentFX

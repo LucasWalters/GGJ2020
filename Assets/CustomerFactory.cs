@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class CustomerFactory : MonoBehaviour
 {
-    public GameObject customerPrefab;
+    public List<GameObject> customerPrefabs;
     public Transform customerParent;
 
     public GameObject CreateCustomer()
     {
-        GameObject customer = Instantiate(customerPrefab, customerParent);
-        customer.transform.Find("Body").GetComponent<MeshRenderer>().material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+        GameObject customer = Instantiate(customerPrefabs[LevelManager.Instance.CurrentLevel], customerParent);
+        //customer.transform.Find("Body").GetComponent<MeshRenderer>().material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
         return customer;
     }
 

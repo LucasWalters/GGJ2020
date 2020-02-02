@@ -44,7 +44,7 @@ public class Marker : MonoBehaviour
 
     private void OnDestroy()
     {
-        foreach(Material mat in oldTextures.Keys)
+        foreach (Material mat in oldTextures.Keys)
         {
             mat.mainTexture = oldTextures[mat];
         }
@@ -57,7 +57,7 @@ public class Marker : MonoBehaviour
             return;
         }
         MeshRenderer rend = collision.gameObject.GetComponent<MeshRenderer>();
-        if (rend == null || rend.sharedMaterial == null || rend.sharedMaterial.mainTexture == null)
+        if (rend == null || rend.material == null || rend.material.mainTexture == null)
             return;
         ContactPoint cp = collision.contacts[0];
         RaycastHit hit;
@@ -68,7 +68,7 @@ public class Marker : MonoBehaviour
         if (cp.otherCollider.Raycast(ray, out hit, 1))
         {
 
-            Material mat = rend.sharedMaterial;
+            Material mat = rend.material;
 
             if (!oldTextures.ContainsKey(mat))
             {
@@ -103,7 +103,8 @@ public class Marker : MonoBehaviour
         {
             for (int x = 0; x < width; x++)
             {
-                if (Vector2.Distance(new Vector2(x, y), center) < radius) {
+                if (Vector2.Distance(new Vector2(x, y), center) < radius)
+                {
                     int currI = y * width + x;
                     if (!original[currI].Equals(color))
                     {

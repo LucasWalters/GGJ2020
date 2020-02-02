@@ -7,10 +7,10 @@ using DG.Tweening.Plugins.Options;
 
 public class ChairAnimations : MonoBehaviour
 {
-    const float DurationAnimationInSeconds = 0.5f;
-    private Vector3 MoveInterval = (Vector3.left * 8);
-    private Vector3 StartPosition = new Vector3(0, 0, 0) - (Vector3.left * 8);
-
+    const float DurationAnimationInSeconds = 1f;
+    private Vector3 MoveInterval = (Vector3.left * 4);
+    private Vector3 StartPosition = new Vector3(0, 0, 0) - (Vector3.left * 4);
+    public AudioSource audioSource;
 
     public void ResetChairPosition()
     {
@@ -19,6 +19,8 @@ public class ChairAnimations : MonoBehaviour
     public TweenerCore<Vector3, Vector3, VectorOptions> MoveChair()
     {
         var currentPosition = this.transform.position;
+
+        //audioSource.Play();
 
         return this.transform.DOMove(currentPosition + MoveInterval, DurationAnimationInSeconds).SetEase(Ease.InOutQuad);
     }

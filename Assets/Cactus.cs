@@ -37,4 +37,15 @@ public class Cactus : MonoBehaviour
         pricks[currentPrickIndex].transform.rotation = Quaternion.LookRotation(cp.normal);
         pricks[currentPrickIndex].SetActive(true);
     }
+
+    public void OnDisable()
+    {
+        if (pricks != null && pricks.Length > 0)
+        {
+            for (int i = 0; i < maxPricks; i++)
+            {
+                pricks[i].SetActive(false);
+            }
+        }
+    }
 }

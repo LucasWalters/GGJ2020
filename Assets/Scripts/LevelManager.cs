@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class LevelManager : MonoBehaviour
 {
+    public static LevelManager Instance;
+
     private int currentLevel = 0;
     private GameObject currentTool;
     public Transform leftHand, rightHand;
@@ -13,11 +15,21 @@ public class LevelManager : MonoBehaviour
     {
         get { return currentLevel; }
     }
+    public GameObject CurrentTool
+    {
+        get { return currentTool; }
+    }
 
     public List<GameObject> tools;
 
-    public void Start()
+    void Awake()
     {
+        if (Instance != null)
+        {
+            Destroy(Instance);
+        }
+        Instance = this;
+
         SetNewTool();
     }
 
@@ -47,6 +59,7 @@ public class LevelManager : MonoBehaviour
             tool.SetActive(false);
         }
         tools[currentLevel].SetActive(true);
+        currentTool = tools[currentLevel];
     }
 
 }

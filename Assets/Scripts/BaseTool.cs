@@ -16,53 +16,86 @@ public class BaseTool : MonoBehaviour
 
     void OnCollisionEnter(Collision coll)
     {
-        colliding = true;
+        if (coll.gameObject.tag == tagToMatch)
+        {
+            Debug.Log("Enter Collision");
+            colliding = true;
+            eventToTriggerOnEnter.AddListener(coll.gameObject.GetComponent<Hair>().GetMethod());
+        }
     }
     void OnCollisionExit(Collision coll)
     {
-        eventToTriggerOnExit.Invoke();
-        colliding = false;
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        colliding = true;
-    }
-    void OnTriggerExit(Collider other)
-    {
-        eventToTriggerOnExit.Invoke();
-        colliding = false;
-    }
-
-    void Update() {
-        if (triggerHairEvent) {
-            if (colliding) {
-                if (triggeredByPlayer) {
-                    
-                    if (triggerDown == false && (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger) || Input.GetKeyDown(KeyCode.E))) {
-                        triggerDown = true;
-                        eventToTriggerOnEnter.Invoke();
-                    }
-                    if (triggerDown == true && (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger) || Input.GetKeyUp(KeyCode.E))) {
-                        triggerDown = false;
-                        eventToTriggerOnExit.Invoke();
-                    }
-                }
-            } 
+        if (coll.gameObject.tag == tagToMatch)
+        {
+            colliding = false;
+            eventToTriggerOnExit.RemoveListener(coll.gameObject.GetComponent<Hair>().GetMethod());
+            eventToTriggerOnExit.AddListener(coll.gameObject.GetComponent<Hair>().GetMethod());
+            eventToTriggerOnExit.Invoke();
+            eventToTriggerOnExit.RemoveListener(coll.gameObject.GetComponent<Hair>().GetMethod());
         }
-        else {
-            if (triggeredByPlayer) {
-                if (triggerDown == false && (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger) || Input.GetKeyDown(KeyCode.E))) {
+    }
+
+    void OnTriggerEnter(Collider coll)
+    {
+        if (coll.gameObject.tag == tagToMatch)
+        {
+            Debug.Log("Enter Trigger");
+            colliding = true;
+            eventToTriggerOnEnter.AddListener(coll.gameObject.GetComponent<Hair>().GetMethod());
+        }
+    }
+    void OnTriggerExit(Collider coll)
+    {
+        if (coll.gameObject.tag == tagToMatch)
+        {
+            colliding = false;
+            eventToTriggerOnExit.RemoveListener(coll.gameObject.GetComponent<Hair>().GetMethod());
+            eventToTriggerOnExit.AddListener(coll.gameObject.GetComponent<Hair>().GetMethod());
+            eventToTriggerOnExit.Invoke();
+            eventToTriggerOnExit.RemoveListener(coll.gameObject.GetComponent<Hair>().GetMethod());
+        }
+    }
+
+    void Update()
+    {
+        if (triggerHairEvent)
+        {
+            if (colliding)
+            {
+                if (triggeredByPlayer)
+                {
+
+                    if (triggerDown == false && (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger) || Input.GetKeyDown(KeyCode.E)))
+                    {
                         triggerDown = true;
                         eventToTriggerOnEnter.Invoke();
+                        Debug.Log("Invoked Enter");
                     }
-                    if (triggerDown == true && (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger) || Input.GetKeyUp(KeyCode.E))) {
+                    if (triggerDown == true && (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger) || Input.GetKeyUp(KeyCode.E)))
+                    {
                         triggerDown = false;
                         eventToTriggerOnExit.Invoke();
+                        Debug.Log("Invoked Exit");
+                    }
                 }
-            } 
-            else {
-                eventToTriggerOnEnter.Invoke();
+            }
+        }
+        else
+        {
+            if (triggeredByPlayer)
+            {
+                if (triggerDown == false && (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger) || Input.GetKeyDown(KeyCode.E)))
+                {
+                    triggerDown = true;
+                    eventToTriggerOnEnter.Invoke();
+                    Debug.Log("Invoked Enter");
+                }
+                if (triggerDown == true && (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger) || Input.GetKeyUp(KeyCode.E)))
+                {
+                    triggerDown = false;
+                    eventToTriggerOnExit.Invoke();
+                    Debug.Log("Invoked Exit");
+                }
             }
         }
     }
@@ -80,7 +113,7 @@ public class BaseTool : MonoBehaviour
     //             eventToTriggerOnExit.Invoke();
     //         }
 
-            
+
     //     }
     // }
 
