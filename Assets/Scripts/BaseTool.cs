@@ -18,20 +18,15 @@ public class BaseTool : MonoBehaviour
     {
         if (coll.gameObject.tag == tagToMatch)
         {
-            Debug.Log("Enter Collision");
-            colliding = true;
-            eventToTriggerOnEnter.AddListener(coll.gameObject.GetComponent<Hair>().GetMethod());
+            coll.gameObject.GetComponent<Hair>().GetMethod().Invoke();
+            eventToTriggerOnEnter.Invoke();
         }
     }
     void OnCollisionExit(Collision coll)
     {
         if (coll.gameObject.tag == tagToMatch)
         {
-            colliding = false;
-            eventToTriggerOnExit.RemoveListener(coll.gameObject.GetComponent<Hair>().GetMethod());
-            eventToTriggerOnExit.AddListener(coll.gameObject.GetComponent<Hair>().GetMethod());
             eventToTriggerOnExit.Invoke();
-            eventToTriggerOnExit.RemoveListener(coll.gameObject.GetComponent<Hair>().GetMethod());
         }
     }
 
@@ -39,26 +34,21 @@ public class BaseTool : MonoBehaviour
     {
         if (coll.gameObject.tag == tagToMatch)
         {
-            Debug.Log("Enter Trigger");
-            colliding = true;
-            eventToTriggerOnEnter.AddListener(coll.gameObject.GetComponent<Hair>().GetMethod());
+            coll.gameObject.GetComponent<Hair>().GetMethod().Invoke();
+            eventToTriggerOnEnter.Invoke();
         }
     }
     void OnTriggerExit(Collider coll)
     {
         if (coll.gameObject.tag == tagToMatch)
         {
-            colliding = false;
-            eventToTriggerOnExit.RemoveListener(coll.gameObject.GetComponent<Hair>().GetMethod());
-            eventToTriggerOnExit.AddListener(coll.gameObject.GetComponent<Hair>().GetMethod());
             eventToTriggerOnExit.Invoke();
-            eventToTriggerOnExit.RemoveListener(coll.gameObject.GetComponent<Hair>().GetMethod());
         }
     }
 
     void Update()
     {
-        if (triggerHairEvent)
+        /*if (triggerHairEvent)
         {
             if (colliding)
             {
@@ -97,7 +87,7 @@ public class BaseTool : MonoBehaviour
                     Debug.Log("Invoked Exit");
                 }
             }
-        }
+        }*/
     }
 
     // private void CheckAndTriggerEvents(GameObject collidedGO, bool enter)
