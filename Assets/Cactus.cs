@@ -10,6 +10,7 @@ public class Cactus : MonoBehaviour
     private GameObject[] pricks;
     private int currentPrickIndex = 0;
     private float lastPrick;
+    public AudioSource audioSource;
 
     private void Start()
     {
@@ -29,6 +30,10 @@ public class Cactus : MonoBehaviour
         }
         lastPrick = Time.time;
         ContactPoint cp = collision.contacts[0];
+        if (!audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
         if (++currentPrickIndex == pricks.Length)
         {
             currentPrickIndex = 0;

@@ -7,6 +7,8 @@ public class Marker : MonoBehaviour
     public int markerSize = 10;
     public Color32 markerColor = Color.black;
     public float drawCooldown = 0.1f;
+
+    public AudioSource audioSource;
     private Color32[] colors;
     private int lastMarkerSize;
     private Dictionary<Material, Texture> oldTextures = new Dictionary<Material, Texture>();
@@ -91,6 +93,10 @@ public class Marker : MonoBehaviour
             {
                 texture.SetPixels32(checkColors);
                 texture.Apply();
+                if (!audioSource.isPlaying)
+                {
+                    audioSource.Play();
+                }
                 lastDraw = Time.time;
             }
         }

@@ -12,6 +12,7 @@ public class Stamp : MonoBehaviour
     private GameObject[] stamps;
     private int currentStampIndex = 0;
     private float lastStamp;
+    public AudioSource audioSource;
 
 
     private void Start()
@@ -42,6 +43,10 @@ public class Stamp : MonoBehaviour
             StartCoroutine(DelayedGoToNextLevel());
         }
         lastStamp = Time.time;
+        if (!audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
         ContactPoint cp = collision.contacts[0];
         if (++currentStampIndex == stamps.Length)
         {

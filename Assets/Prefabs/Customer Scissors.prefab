@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6697863864169522059}
   m_Layer: 0
   m_Name: transform8
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6441678897547222932}
   m_Layer: 0
   m_Name: polySurface8
-  m_TagString: Hair
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 6217660790840549343}
   m_Layer: 0
   m_Name: polySurface7
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 8698025543185288017}
   m_Layer: 0
   m_Name: polySurface15 1
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 4659452482054848445}
   m_Layer: 0
   m_Name: transform12
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 720125513720419471}
   m_Layer: 0
   m_Name: polySurface12
-  m_TagString: Hair
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 3127420946162794534}
   m_Layer: 0
   m_Name: polySurface1
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 7269441241103581792}
   m_Layer: 0
   m_Name: polySurface13
-  m_TagString: Hair
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 8238200547837978949}
   m_Layer: 0
   m_Name: transform2
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -554,7 +554,7 @@ GameObject:
   - component: {fileID: 2612917094205581772}
   m_Layer: 0
   m_Name: polySurface2
-  m_TagString: Hair
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -686,7 +686,7 @@ GameObject:
   - component: {fileID: 2887099572223650282}
   m_Layer: 0
   m_Name: transform10
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -716,7 +716,7 @@ GameObject:
   - component: {fileID: 8890767771103400354}
   m_Layer: 0
   m_Name: polySurface5
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -749,7 +749,7 @@ GameObject:
   - component: {fileID: 5398161785115116027}
   m_Layer: 0
   m_Name: polySurface14 1
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -784,7 +784,7 @@ GameObject:
   - component: {fileID: 4273407771206800413}
   m_Layer: 0
   m_Name: polySurface15
-  m_TagString: Hair
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -888,7 +888,7 @@ GameObject:
   - component: {fileID: 7309611427408696741}
   m_Layer: 0
   m_Name: transform11
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -918,7 +918,7 @@ GameObject:
   - component: {fileID: 6834832255319931349}
   m_Layer: 0
   m_Name: transform5
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -948,7 +948,7 @@ GameObject:
   - component: {fileID: 4210884484949088930}
   m_Layer: 0
   m_Name: polySurface3
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -979,7 +979,7 @@ GameObject:
   - component: {fileID: 5534761470109046746}
   m_Layer: 0
   m_Name: polySurface14
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1017,7 +1017,7 @@ GameObject:
   - component: {fileID: 7530286281665796606}
   m_Layer: 0
   m_Name: polySurface6
-  m_TagString: Hair
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1121,7 +1121,7 @@ GameObject:
   - component: {fileID: 1616508678045994988}
   m_Layer: 0
   m_Name: transform3
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1151,7 +1151,7 @@ GameObject:
   - component: {fileID: 2718002683204350930}
   m_Layer: 0
   m_Name: transform7
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1181,7 +1181,7 @@ GameObject:
   - component: {fileID: 7634044215728797720}
   m_Layer: 0
   m_Name: transform4
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1211,7 +1211,7 @@ GameObject:
   - component: {fileID: 6134022948420763566}
   m_Layer: 0
   m_Name: transform6
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1245,7 +1245,7 @@ GameObject:
   - component: {fileID: 3428965948866797097}
   m_Layer: 0
   m_Name: polySurface10
-  m_TagString: Hair
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1412,7 +1412,7 @@ GameObject:
   - component: {fileID: 1691194846205053047}
   m_Layer: 0
   m_Name: polySurface17
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1488,7 +1488,7 @@ GameObject:
   - component: {fileID: 4004702708235614437}
   m_Layer: 0
   m_Name: goku_GT:Hair
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1521,6 +1521,7 @@ GameObject:
   - component: {fileID: 4777093687126301845}
   - component: {fileID: 5310608193879552368}
   - component: {fileID: 7976673358770274845}
+  - component: {fileID: 5653169480338258748}
   m_Layer: 0
   m_Name: Head
   m_TagString: Customer
@@ -1567,7 +1568,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4230fbb9c91fb42a38d6d06f292cccea, type: 2}
+  - {fileID: 2100000, guid: 3353a907e811e814faa7b3288b46f446, type: 2}
   - {fileID: 2100000, guid: 5c7e29d89966f438eb028437c557cf6a, type: 2}
   - {fileID: 2100000, guid: 5c7e29d89966f438eb028437c557cf6a, type: 2}
   m_StaticBatchInfo:
@@ -1590,6 +1591,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5653169480338258748
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6819271076366057204}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4785775068503242349, guid: 76e3fa98ca87cdb49b65026ba799dcc8, type: 3}
 --- !u!64 &5383912111230538819
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1629,7 +1644,7 @@ GameObject:
   - component: {fileID: 376974810053424604}
   m_Layer: 0
   m_Name: polySurface4
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1662,7 +1677,7 @@ GameObject:
   - component: {fileID: 4345828118317385562}
   m_Layer: 0
   m_Name: polySurface11
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1695,7 +1710,7 @@ GameObject:
   - component: {fileID: 5969979945833512327}
   m_Layer: 0
   m_Name: transform1
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1725,7 +1740,7 @@ GameObject:
   - component: {fileID: 8054399291135400346}
   m_Layer: 0
   m_Name: Customer Scissors
-  m_TagString: Head
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1762,7 +1777,7 @@ GameObject:
   - component: {fileID: 8459693992959495921}
   m_Layer: 0
   m_Name: polySurface16
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1793,7 +1808,7 @@ GameObject:
   - component: {fileID: 4539724680320849727}
   m_Layer: 0
   m_Name: transform9
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1823,7 +1838,7 @@ GameObject:
   - component: {fileID: 2360733017527254990}
   m_Layer: 0
   m_Name: polySurface9
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1845,6 +1860,20 @@ Transform:
   m_Father: {fileID: 6217660790840549343}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &3517474037753558660
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7859140923193870494}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 3787144391514394711, guid: 59d1faee0ac8c495a863c1adcf4eaa21, type: 3}
 --- !u!1001 &1976450337331912410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1920,7 +1949,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: e5eb5f37fc5a54a9991945dbd5a7d00b,
         type: 3}
       propertyPath: m_TagString
-      value: Hair
+      value: Customer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5eb5f37fc5a54a9991945dbd5a7d00b, type: 3}
@@ -2011,19 +2040,19 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 7946832c7ba5b449c8f6a8094e00232f,
         type: 3}
       propertyPath: m_TagString
-      value: Hair
+      value: Customer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7946832c7ba5b449c8f6a8094e00232f, type: 3}
---- !u!1 &5497513372853532516 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 7946832c7ba5b449c8f6a8094e00232f,
-    type: 3}
-  m_PrefabInstance: {fileID: 4569740059844783725}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8795616461083247991 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 7946832c7ba5b449c8f6a8094e00232f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4569740059844783725}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5497513372853532516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 7946832c7ba5b449c8f6a8094e00232f,
     type: 3}
   m_PrefabInstance: {fileID: 4569740059844783725}
   m_PrefabAsset: {fileID: 0}
@@ -2102,19 +2131,19 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 7b1f6e3b7e63a4339a8c021ccec1918e,
         type: 3}
       propertyPath: m_TagString
-      value: Hair
+      value: Customer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b1f6e3b7e63a4339a8c021ccec1918e, type: 3}
---- !u!4 &1675735137237318820 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 7b1f6e3b7e63a4339a8c021ccec1918e,
-    type: 3}
-  m_PrefabInstance: {fileID: 5925572675688863678}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2385273801378975415 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 7b1f6e3b7e63a4339a8c021ccec1918e,
+    type: 3}
+  m_PrefabInstance: {fileID: 5925572675688863678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1675735137237318820 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 7b1f6e3b7e63a4339a8c021ccec1918e,
     type: 3}
   m_PrefabInstance: {fileID: 5925572675688863678}
   m_PrefabAsset: {fileID: 0}
@@ -2193,7 +2222,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: fa9d0bac8ce2f4fe69eed254e383f919,
         type: 3}
       propertyPath: m_TagString
-      value: Hair
+      value: Customer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa9d0bac8ce2f4fe69eed254e383f919, type: 3}
@@ -2216,6 +2245,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8054399291135400346}
     m_Modifications:
+    - target: {fileID: -7818404654039685306, guid: 59d1faee0ac8c495a863c1adcf4eaa21,
+        type: 3}
+      propertyPath: m_TagString
+      value: Customer
+      objectReference: {fileID: 0}
+    - target: {fileID: -7162361053368815880, guid: 59d1faee0ac8c495a863c1adcf4eaa21,
+        type: 3}
+      propertyPath: m_TagString
+      value: Customer
+      objectReference: {fileID: 0}
+    - target: {fileID: -6886387683407841612, guid: 59d1faee0ac8c495a863c1adcf4eaa21,
+        type: 3}
+      propertyPath: m_TagString
+      value: Customer
+      objectReference: {fileID: 0}
+    - target: {fileID: -6581041025168474491, guid: 59d1faee0ac8c495a863c1adcf4eaa21,
+        type: 3}
+      propertyPath: m_TagString
+      value: Customer
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 59d1faee0ac8c495a863c1adcf4eaa21,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2286,6 +2335,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: -2364669641020464262, guid: 59d1faee0ac8c495a863c1adcf4eaa21,
+        type: 3}
+      propertyPath: m_TagString
+      value: Customer
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 59d1faee0ac8c495a863c1adcf4eaa21,
         type: 3}
       propertyPath: m_Name
@@ -2296,11 +2350,37 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Customer
       objectReference: {fileID: 0}
+    - target: {fileID: 330708324486205603, guid: 59d1faee0ac8c495a863c1adcf4eaa21,
+        type: 3}
+      propertyPath: m_TagString
+      value: Customer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465819707375236652, guid: 59d1faee0ac8c495a863c1adcf4eaa21,
+        type: 3}
+      propertyPath: m_TagString
+      value: Customer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5328505852995311131, guid: 59d1faee0ac8c495a863c1adcf4eaa21,
+        type: 3}
+      propertyPath: m_TagString
+      value: Customer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292535884062368016, guid: 59d1faee0ac8c495a863c1adcf4eaa21,
+        type: 3}
+      propertyPath: m_TagString
+      value: Customer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59d1faee0ac8c495a863c1adcf4eaa21, type: 3}
 --- !u!4 &4257170128784409794 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 59d1faee0ac8c495a863c1adcf4eaa21,
+    type: 3}
+  m_PrefabInstance: {fileID: 9110277798672527320}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7859140923193870494 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7818404654039685306, guid: 59d1faee0ac8c495a863c1adcf4eaa21,
     type: 3}
   m_PrefabInstance: {fileID: 9110277798672527320}
   m_PrefabAsset: {fileID: 0}
