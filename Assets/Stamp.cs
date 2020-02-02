@@ -43,10 +43,11 @@ public class Stamp : MonoBehaviour
             StartCoroutine(DelayedGoToNextLevel());
         }
         lastStamp = Time.time;
-        if (!audioSource.isPlaying)
+        if (audioSource.isPlaying)
         {
-            audioSource.Play();
+            audioSource.Stop();
         }
+        audioSource.Play();
         ContactPoint cp = collision.contacts[0];
         if (++currentStampIndex == stamps.Length)
         {

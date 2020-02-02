@@ -6,7 +6,7 @@ using DG.Tweening;
 
 public class DoorAnimations : MonoBehaviour
 {
-
+    public AudioSource audioSource;
     public GameObject door;
 
     const float openingDoorDurationInSeconds = 0.5f;
@@ -19,6 +19,15 @@ public class DoorAnimations : MonoBehaviour
     public void OpenDoor()
     {
         var currentPosition = door.transform.position;
+
+        if (audioSource != null)
+        {
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
+            audioSource.Play();
+        }
 
         door
             .transform
